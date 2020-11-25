@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <section class="home">
+   <div class="in-flex"> </div>
+    <div class="in-flex">
+   
+
+    <nav class="menu2">
+    <ul>
+        <li><a href="test.html">PR0BLEMAS(MATEMATICAS)</a></li>
+    <li><a href="test5.html">TEST</a></li>
+        <li><a href="index5.html">ANIMACION</a></li>
+   
+    </ul>
+</nav>
+<section>   
+    <!-- Latest compiled and minified JS -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <style type="text/css" media="screen">
+         body{
+              background: linear-gradient(to right, #33ccff 0%, #9966ff 100%);
+        }
+         {
+
+  margin: 0;
+  padding: 0;
+
+}
+
+a {
+  color: #f42555;
+  text-decoration: underline;
+
+
+}
+
+a:hover {
+  text-decoration: none;
+}
+#menu{
+  padding: 10px 20px;
+}
+#menu li{
+  display: inline-block;
+  list-style: none;
+  padding: 30px;
+}
+.menu2{
+  overflow: hidden;
+  background-color: #333;
+  
+}
+.menu2 li{
+  display: inline-block;
+  list-style: none;
+  padding: 10px;
+  font: bold 14px vernada, sans-serif;
+  
+}
+.menu2 a{
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 15px;
+  text-decoration:  none;
+  font-size: 14px;
+}
+.menu2 a:hover {
+  background-color: #ddd;
+  color: black;
+  
+}
+.menu2{
+  background-color: #cc3399;
+  color: white;
+  
+}
+        
+        .enlaces{
+            text-align: center;
+            color: #00ffff;
+            font-size: 25px;
+            background: #000000;
+
+        }
+        h4{
+            text-align: center;
+            color: #660066;
+            font-size: 25px;
+        }
+     
+     
+      h1{
+        text-align: center;
+        color: #cc3300;
+        font-size: 80px;
+     }
+     div{
+        color: #6600cc;
+        font-size: 40px;
+     }
+     
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Test evaluativo de tekken 7</h1>
+
+        <hr>
+        <form action="" name="cuestionario">
+            <div class="form-row">
+                <div class="col-lg-4 col-sm-6 col-xs-12">
+                    <input type="text" name="firstname" class="form-control" placeholder="First name">
+                </div>
+                <div class="col-lg-4 col-sm-6 col-xs-12">
+                    <input type="text" name="lastname" class="form-control" placeholder="Last name">
+                </div>
+            </div>
+            <hr>
+            <div class="form-group">
+                <label>¿Que personaje de tekken 7 empieza con H?</label>
+                <div class="custom-control custom-radio">
+                    <input type="radio" id="customRadio1" name="p1" value="1" class="custom-control-input" checked>
+                    <label class="custom-control-label" for="customRadio1">Heihachi</label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input type="radio" id="customRadio2" name="p1" value="0" class="custom-control-input">
+                    <label class="custom-control-label" for="customRadio2">Hulk</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>¿Cuantas horas dura la pelicula de tekken7?</label>
+                <div class="custom-control custom-radio">
+                    <input type="radio" id="customRadio3" name="p2" value="0" class="custom-control-input" checked>
+                    <label class="custom-control-label" for="customRadio3">1 Hora</label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input type="radio" id="customRadio4" name="p2" value="0" class="custom-control-input">
+                    <label class="custom-control-label" for="customRadio4">2 Horas</label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input type="radio" id="customRadio5" name="p2" value="1" class="custom-control-input">
+                    <label class="custom-control-label" for="customRadio5">Ninguna de las mencionadas</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>¿Quien pertenecia a una familia de asesinos?</label>
+                <div class="custom-control custom-radio">
+                    <input type="radio" id="customRadio6" name="p3" value="1" class="custom-control-input" checked>
+                    <label class="custom-control-label" for="customRadio6">Anna</label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input type="radio" id="customRadio7" name="p3" value="0" class="custom-control-input">
+                    <label class="custom-control-label" for="customRadio7">Lili</label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input type="radio" id="customRadio8" name="p3" value="0" class="custom-control-input">
+                    <label class="custom-control-label" for="customRadio8">Katarina</label>
+                </div>
+            </div>
+            
+            <hr>
+            <button class="btn btn-success col-2" type="submitt" onclick="evaluar()">Enviar</button>
+            <button class="btn btn-danger col-2" type="reset">Limpiar</button>
+        </form>
+        <br>
+    </div>
+    <script>
+        function evaluar(){
+            var nombre = document.cuestionario.firstname.value
+            var apellido = document.cuestionario.lastname.value
+            var p1 = document.cuestionario.p1.value
+            var p2 = document.cuestionario.p2.value
+            var p3 = document.cuestionario.p3.value
+            
+            var total = 0
+            total += parseInt(p1)+parseInt(p2)+parseInt(p3)
+            alert(nombre+" "+apellido+" tienes un total de: "+total+"/3")
+        }
+ </script>
+
+ <footer>
+  <h4>ME PUEDES CONTACTAR POR:</h4>
+  <div class="enlaces">
+    <a title="facebook" href="https://www.facebook.com/"><img src="facebook.png" alt="facebook" width="40" height="40"/></a>
+    <a title="twitter" href="https://www.twitter.com/"><img src="twitter.png" alt="twitter" width="40" height="40"/></a>
+    <a title="instagram" href="https://www.instagram.com/"><img src="instagram.png" alt="instagram" width="40" height="40"/></a>
+    <p>Martha Gabriela<br> 
+      Ludeño Calla <br>
+        INF-113</p>
+
+  
+  </footer>
+</body>
+</html>

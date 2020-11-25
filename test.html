@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>OPERACIONES</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="estilos.css">
+	<section class="home">
+   <div class="in-flex"> </div>
+    <div class="in-flex">
+   
+
+    <nav class="menu2">
+	<ul>
+		<li><a href="test.html">PR0BLEMAS(MATEMATICAS)</a></li>
+    <li><a href="test5.html">TEST</a></li>
+        <li><a href="index5.html">ANIMACION</a></li>
+   
+	</ul>
+</nav>
+<section>	
+
+	<style type="text/css" media="screen">
+		 body{
+            background: linear-gradient(to right, #ff33cc 0%, #cc99ff 100%);
+        }
+          {
+  margin: 0;
+  padding: 0;
+
+}
+
+a {
+  color: #f42555;
+  text-decoration: underline;
+
+
+}
+
+a:hover {
+  text-decoration: none;
+}
+#menu{
+  padding: 10px 20px;
+}
+#menu li{
+  display: inline-block;
+  list-style: none;
+  padding: 30px;
+}
+.menu2{
+  overflow: hidden;
+  background-color: #333;
+  
+}
+.menu2 li{
+  display: inline-block;
+  list-style: none;
+  padding: 10px;
+  font: bold 14px vernada, sans-serif;
+  
+}
+.menu2 a{
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 15px;
+  text-decoration:  none;
+  font-size: 14px;
+}
+.menu2 a:hover {
+  background-color: #ddd;
+  color: black;
+  
+}
+.menu2{
+  background-color: #cc3399;
+  color: white;
+  
+}
+        form{
+        	text-align: center;
+            color: #00ffff;
+            font-size: 25px;
+            background: #000000;
+
+        }
+        .enlaces{
+        	text-align: center;
+            color: #00ffff;
+            font-size: 25px;
+            background: #000000;
+
+        }
+        h4{
+        	text-align: center;
+            color: #660066;
+            font-size: 25px;
+        }
+     
+     .calculos{
+     	color: #ffccff;
+
+     }
+       h1{
+          text-align: center;
+          color: #ffffff;
+          font-size: 80px;
+     }
+     input{
+     	color: #6600cc;
+     }
+     button[type=button]{
+     	background: linear-gradient(to bottom, #cc6699 0%, #ccccff 100%);
+     	
+     }
+     button[type=button]{
+     	
+     	font-size: 25px;
+
+     }
+     .result{
+     	color: #ffccff;
+     }
+     input[type=reset]{
+     	background: linear-gradient(to bottom, #ff99cc 0%, #9933ff 100%);
+     	font-size: 25px;
+     } 
+     input[type=number]{
+     	background: #ffccff;
+     	width:150px ; 
+     	height:65px;
+     	font-size: 25px;
+     }
+     
+	</style>
+
+</head>
+<body>
+	<h1></h1>
+<section class="calculos">
+	<form>
+		
+		<h2 id="subtitulo">OPERACIONES CON FACTORIALES</h2>
+		<input type="number" id="n" placeholder="n">
+	    <input type="number" id="m" placeholder="m"><br>
+	    <button type="button" id="btn">CALCULAR</button>
+	    <input type="reset" value="LIMPIAR" >
+		<p id="resultado"></p>
+		<p id="resultado1"></p>
+		<p id="resultado2"></p>
+		<p id="resultado3"></p>
+			<script type="text/javascript">
+			function op ()
+			{
+				var m = parseInt(document.getElementById('n').value);
+				var n = parseInt(document.getElementById('m').value);
+				var f1 = facto(m);
+				document.getElementById("resultado").innerHTML = "Primer numero: " +m+"! es = "+f1+"<br>" 
+				var f2 = facto(n);
+				document.getElementById("resultado1").innerHTML = "Segundo numero: " +n+"! es = "+f2+"<br>" 
+				var j=m-n;
+				var f3 = facto(j);
+				document.getElementById("resultado2").innerHTML = "(m-n)!: " +j+"! es = "+f3+"<br>"
+				var cb = combi(f1,f2,f3);
+				document.getElementById("resultado3").innerHTML = "La respuesta es: " +cb+"<br>"
+				function  combi(f1,f2,f3)
+				{
+				c=f1/(f2*f3);
+				return c;
+				}
+				function facto(n) 
+				{
+						var n;
+						var f=1;
+						for (var i=1;i<=n;i++)
+						{
+							f=f*i
+						}
+					return f;
+				}
+			}
+			var b=document.getElementById('btn');
+			b.addEventListener('click',op);
+			</script>
+	</form>
+</section>
+<section class="calculos">
+	<form>
+		<h2 id="subtitulo">SUMAS DE LOS DIGITOS</h2>
+		<input type="number" id="num"> <br>
+	    <button type="button" id="butn">CALCULAR</button>
+	    <input type="reset" value="LIMPIAR" >
+		<p id="result"></p>
+		<script type="text/javascript">
+			function ejtwo ()
+			{
+				var k = parseInt(document.getElementById('num').value);
+				var sdig = sumardigitos(k);
+				document.getElementById("result").innerHTML = "Los digitos del numero: " +k+" suman "+sdig+"<br>"
+				function  sumardigitos(x)
+				{
+				var y=x;
+				var sd=0;
+				while (y>0)
+				{
+					var dig=y-Math.trunc(y/10)*10;
+					sd=sd+dig;
+					y=Math.trunc(y/10);
+					
+				}
+				return sd;
+				}
+			}
+			var a=document.getElementById('butn');
+			a.addEventListener('click',ejtwo);
+		</script>
+	</form>
+</section>
+<section class="calculos">
+	<form>
+		<h2 id="subtitulo">¿ES NUMERO PRIMO?</h2>
+		<input type="number" id="numb"> <br>
+	    <button type="button" id="buttn">CALCULAR</button>
+	    <input type="reset" value="LIMPIAR" >
+		<p id="resultt"></p>
+		<script type="text/javascript">
+			function operation () 
+			{
+				var z = parseInt(document.getElementById('numb').value);
+				i=0
+				primo=true;
+				for (i=2;i<z;i++) {
+					if(z%i==0) {
+						primo=false;
+					}
+				}
+				if(primo==true) {
+					document.getElementById("resultt").innerHTML = z+" es primo"
+				} else {
+					document.getElementById("resultt").innerHTML = z+" no es primo"
+				}
+			}
+			var c=document.getElementById('buttn');
+			c.addEventListener('click',operation);
+		</script>	
+	</form>
+</section>
+<section class="calculos">
+	<form>
+		<h2 id="subtitulo">OPERACION CON RAICES</h2>
+		<input type="number" id="a" placeholder="a">
+		<input type="number" id="b" placeholder="b">
+	    <input type="number" id="c" placeholder="c"><br>
+	    <button type="button" id="button">CALCULAR</button>
+	    <input type="reset" value="LIMPIAR" >
+		<p id="resultadoss"></p>
+		<p id="resultadoss1"></p>
+		<p id="resultadoss2"></p>
+		<p id="resultadoss3"></p>
+		<script type="text/javascript">
+		function ope () 
+		{
+			var n1 = parseInt(document.getElementById('a').value);
+			var n2 = parseInt(document.getElementById('b').value);
+			var n3 = parseInt(document.getElementById('c').value);
+			document.getElementById("resultadoss3").innerHTML = "Tiene " +raices(n1,n2,n3)
+	        function raices(num1,num2,num3)
+          	{
+            d=Math.pow(num2,2)-(4*num1*num3);
+            document.getElementById("resultadoss").innerHTML = "El discriminante es: " +d+"<br>"
+            let x1=(-num2+Math.sqrt(d))/(2*num1)
+            let x2=(-num2-Math.sqrt(d))/(2*num1)
+            document.getElementById("resultadoss1").innerHTML = "Raices: <br> " +x2+"<br>"
+            document.getElementById("resultadoss2").innerHTML = x1+"<br>"
+            if(d==0)
+            {
+              return "una raiz"
+             }
+             else if (d<0)
+             {
+              return "cero raices reales"
+              } 
+              else
+              {
+              return "dos raices"
+              }
+                }
+        }
+            var d=document.getElementById('button');
+			d.addEventListener('click',ope);
+		</script>
+	</form>
+</section>
+<footer>
+  <h4>ME PUEDES CONTACTAR POR:</h4>
+  <div class="enlaces">
+    <a title="facebook" href="https://www.facebook.com/"><img src="facebook.png" alt="facebook" width="40" height="40"/></a>
+    <a title="twitter" href="https://www.twitter.com/"><img src="twitter.png" alt="twitter" width="40" height="40"/></a>
+    <a title="instagram" href="https://www.instagram.com/"><img src="instagram.png" alt="instagram" width="40" height="40"/></a>
+    <p>Martha Gabriela<br> 
+      Ludeño Calla <br>
+        INF-113</p>
+
+  
+  </footer>
+</body>
+</html>
